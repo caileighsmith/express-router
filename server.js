@@ -1,12 +1,14 @@
 const express = require("express")
 const app = express()
 const port = 3000
+const {check, validationResult} = require('express-validator');
 
 const users = require('./routes/users')
 const fruits = require('./routes/fruits')
 
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
+
 
 
 // List of Users
